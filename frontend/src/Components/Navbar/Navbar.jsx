@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoMdSearch } from 'react-icons/io';
+import logo from './AC.png'; // Import the logo image
 
 const MenuLinks = [
     {
@@ -62,7 +63,8 @@ const Navbar = () => {
     return (
         <nav className="bg-white dark:bg-gray-900 dark:text-white py-4">
             <div className="container flex items-center justify-between">
-            <img src="./AC.png" alt="Logo" className="h-10" />
+            <img src={logo} alt="Logo" className="h-10"  />
+
                 <a href="/" className="text-primary font-semibold tracking-wider text-2xl uppercase sm:text-3xl">
                     Agri Connect
                 </a>
