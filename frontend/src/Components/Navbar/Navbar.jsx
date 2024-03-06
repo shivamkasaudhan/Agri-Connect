@@ -11,7 +11,7 @@ const MenuLinks = [
     {
         id: 2,
         name: "Shop",
-        link: "/#Shop"
+        link: "/Shop"
     },
     {
         id: 3,
@@ -63,11 +63,14 @@ const Navbar = () => {
     return (
         <nav className="bg-white dark:bg-gray-900 dark:text-white py-4">
             <div className="container flex items-center justify-between">
-            <img src={logo} alt="Logo" className="h-10"  />
-
+                <div className="flex ">
+                <img src={logo} alt="Logo" className="h-10 mr-2"  />
                 <a href="/" className="text-primary font-semibold tracking-wider text-2xl uppercase sm:text-3xl">
+                
                     Agri Connect
                 </a>
+                </div>
+                
                 <div className="lg:block hidden">
                     <ul className="flex items-center gap-4">
                         {MenuLinks.map((data) => (
