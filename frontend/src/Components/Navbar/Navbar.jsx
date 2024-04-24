@@ -21,7 +21,7 @@ const MenuLinks = [
     {
         id: 4,
         name: "Blogs",
-        link: "/#Blogs"
+        link: "/Blog"
     },
     {
         id: 5,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_KEY = "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";
+const API_KEY = "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";
 
 function CropSuggestion() {
   const [soilType, setSoilType] = useState("");
