@@ -19,7 +19,7 @@ function CropSuggestion() {
         }
       ],
       "temperature": 0.7,
-      // "max_tokens": 64,
+      "max_tokens": 64,
       "top_p": 1
     }
 
