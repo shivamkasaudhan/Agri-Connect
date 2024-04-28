@@ -16,7 +16,7 @@ const MenuLinks = [
     {
         id: 3,
         name: "About",
-        link: "/#About"
+        link: "/About"
     },
     {
         id: 4,
@@ -28,6 +28,9 @@ const MenuLinks = [
         name: "Crop Suggestion",
         link: "/crop-suggestion"
     },
+    {
+        
+    }
 ];
 
 const IndianLanguages = [

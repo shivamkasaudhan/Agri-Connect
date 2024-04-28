@@ -5,6 +5,7 @@ import CropSuggestion from './Components/CropSuggestion';
 import ShopPage from './Components/Shop';
 import BlogPage from './Components/BlogPage/BlogPage';
 import Blogs from './Components/BlogPage/Blogs'; // Import Blogs component
+import About from './Components/About';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/crop-suggestion" element={<CropSuggestion />} />
+                <Route path="/About" element={<About />} />
                 <Route path="/shop" element={<ShopPage />} /> 
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:id" element={<Blogs />} /> {/* Route for detailed blog page */}
