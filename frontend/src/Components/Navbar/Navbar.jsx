@@ -27,10 +27,10 @@ const MenuLinks = [
         id: 5,
         name: "Crop Suggestion",
         link: "/crop-suggestion"
-    },
-    {
-        
     }
+    // {
+        
+    // }
 ];
 
 const IndianLanguages = [
