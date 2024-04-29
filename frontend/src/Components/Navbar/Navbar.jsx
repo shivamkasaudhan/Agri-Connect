@@ -28,6 +28,9 @@ const MenuLinks = [
         name: "Crop Suggestion",
         link: "/crop-suggestion"
     }
+    // {
+        
+    // }
 ];
 
 const Navbar = () => {

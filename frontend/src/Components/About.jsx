@@ -1,35 +1,69 @@
 import React from 'react';
 
-function AboutPage() {
+function AboutUsPage() {
   return (
     <div className="min-h-screen bg-brandWhite flex justify-center items-center">
       <div className="max-w-3xl w-full mx-4 bg-brandWhite rounded-lg shadow-lg p-8">
-        <h1 className="text-4xl font-bold text-center mb-8">About AgriConnect</h1>
-        <h2 className="text-2xl font-bold mb-6 text-center">Cultivating a Future of Empowering Farmers and Sustainable Agriculture</h2>
-        <p className="text-lg text-gray-800 mb-8">Welcome to AgriConnect, your gateway to a thriving agricultural ecosystem! We're a passionate community dedicated to empowering farmers, fostering knowledge exchange, and harnessing the power of AI to revolutionize the agricultural landscape. Together, let's cultivate a future where farmers flourish, consumers access fresh, local produce, and sustainable practices become the norm.</p>
-        <h3 className="text-lg font-bold mb-4">Our Mission</h3>
-        <ul className="list-disc list-inside text-lg text-gray-800 mb-8">
-          <li><strong>Empowering Farmers:</strong> At AgriConnect, we believe farmers are the heroes who nourish our communities. Our platform provides them with a reliable marketplace to sell their produce directly, eliminating middlemen and ensuring fair returns.</li>
-          <li><strong>Knowledge Hub:</strong> Our informative blog section is a treasure trove of practical knowledge, covering everything from traditional farming techniques to cutting-edge advancements in agriculture.</li>
-          <li><strong>AI-powered Farm Assistant:</strong> Our groundbreaking AI assistant is your personalized farm advisor, offering data-driven recommendations, real-time insights, and tailored solutions to optimize your operations.</li>
-        </ul>
-        <h3 className="text-lg font-bold mb-4">Our Features</h3>
-        <ul className="list-disc list-inside text-lg text-gray-800 mb-8">
-          <li><strong>Direct Marketplace:</strong> Sell your products directly to consumers and businesses, maximizing your profits and building stronger connections with those who enjoy your harvest.</li>
-          <li><strong>Community Connection:</strong> Network with fellow farmers, learn from their experiences, and share your knowledge to create a supportive and collaborative environment.</li>
-          <li><strong>Knowledge Library:</strong> Access a wealth of informative blogs, curated by experts, to stay informed on best practices, emerging technologies, and industry trends.</li>
-          <li><strong>AI-powered Farm Assistant:</strong> Unleash the power of AI to optimize your farm management. Gain personalized insights, manage resources efficiently, and make informed decisions to boost yields and profitability.</li>
-        </ul>
-        <h3 className="text-lg font-bold mb-4">Our Goals</h3>
-        <ul className="list-disc list-inside text-lg text-gray-800 mb-8">
-          <li><strong>Empowering Farmers:</strong> We envision a future where farmers are well-equipped and empowered to succeed. Our platform provides them with the tools, resources, and fair market access they deserve.</li>
-          <li><strong>Knowledge for All:</strong> We believe in fostering a culture of knowledge sharing and collaboration within the farming community. Our comprehensive library and forum empower farmers to learn from each other and stay ahead of the curve.</li>
-          <li><strong>Sustainable Future:</strong> We advocate for sustainable farming practices that nurture the environment for generations to come. Our AI assistant and educational resources help farmers optimize resource use and minimize their ecological footprint.</li>
-        </ul>
-        <p className="text-lg text-gray-800">Become part of a movement that's transforming agriculture. Whether you're a farmer, a consumer who values fresh, local produce, or an advocate for a sustainable future, AgriConnect has a place for you. Let's cultivate a more prosperous and sustainable future for agriculture, together.</p>
+        <h1 className="text-4xl font-bold text-center mb-8 text-primary">About Us</h1>
+
+        {/* Brand Story */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Our Brand Story</h2>
+          <p className="text-lg text-gray-800 mb-4">
+            At FreshHarvest, our story began with a passion for sustainable farming and a desire to bring fresh, organic produce directly from the farm to your table. What started as a small family farm has now grown into a thriving community of farmers and consumers who share our vision for a healthier, more sustainable future.
+          </p>
+          <p className="text-lg text-gray-800 mb-4">
+            We believe in the power of locally grown food to nourish our bodies and our communities. That's why we're committed to supporting local farmers and promoting environmentally friendly farming practices. Join us in our mission to make fresh, organic produce accessible to everyone.
+          </p>
+        </section>
+
+        {/* Who We Serve */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Who We Serve</h2>
+          <p className="text-lg text-gray-800 mb-4">
+            Our products are for anyone who values the quality and taste of fresh, organic produce. Whether you're a health-conscious individual, a busy parent looking to feed your family nutritious meals, or a chef searching for the finest ingredients, FreshHarvest is here for you.
+          </p>
+          <p className="text-lg text-gray-800 mb-4">
+            We cater to individuals and businesses alike, offering a wide range of seasonal fruits, vegetables, herbs, and more. With our convenient online platform, you can easily browse our selection, place your order, and have farm-fresh goodness delivered straight to your doorstep.
+          </p>
+        </section>
+
+        {/* How We Operate */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">How We Operate</h2>
+          <p className="text-lg text-gray-800 mb-4">
+            At FreshHarvest, transparency and sustainability are at the core of everything we do. We work directly with local farmers who share our commitment to organic farming practices and ethical production methods. By cutting out the middlemen, we ensure fair prices for both our farmers and our customers.
+          </p>
+          <p className="text-lg text-gray-800 mb-4">
+            Our online platform connects you with a diverse network of farmers, allowing you to support small-scale agriculture while enjoying the freshest produce available. We prioritize freshness and quality, carefully selecting each item to ensure it meets our rigorous standards.
+          </p>
+        </section>
+
+        {/* The Face of Our Business */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">The Face of Our Business</h2>
+          <p className="text-lg text-gray-800 mb-4">
+            Meet the team behind FreshHarvest – a group of passionate individuals dedicated to bringing you the best in organic produce. Our founders, Sarah and David, started this journey with a shared love for farming and a commitment to sustainability. Today, they lead a team of farmers, food enthusiasts, and customer service experts who are here to serve you.
+          </p>
+          {/* Include images of founders or team members here */}
+        </section>
+
+        {/* Persuasive Content */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Persuasive Content</h2>
+          <p className="text-lg text-gray-800 mb-4">
+            Ready to experience the difference with FreshHarvest? Explore our wide selection of farm-fresh produce, browse our recipe ideas for inspiration, and join our community of food lovers who are passionate about supporting local agriculture. Together, we can create a healthier, more sustainable future for all.
+          </p>
+        </section>
+
+        {/* Call to Action */}
+        <section>
+          {/* Add your call to action here, such as buttons, links, etc. */}
+          <button className="bg-primary text-white py-2 px-4 rounded-md hover:bg-blue-600">Shop Now</button>
+        </section>
       </div>
     </div>
   );
 }
 
-export default AboutPage;
+export default AboutUsPage;
