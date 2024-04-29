@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import CropSuggestion from './Components/CropSuggestion';
 import ShopPage from './Components/Shop';
-import BlogPage from './Components/BlogPage/BlogPage';
-import Blogs from './Components/BlogPage/Blogs'; // Import Blogs component
+import BlogList from './Components/BlogList/BlogList';
+import BlogPost from './Components/BlogPost/BlogPost'; // Import the component to display full blog post content
 import About from './Components/About';
 
 const App = () => {
@@ -13,10 +13,10 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/crop-suggestion" element={<CropSuggestion />} />
-                <Route path="/About" element={<About />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/shop" element={<ShopPage />} /> 
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:id" element={<Blogs />} /> {/* Route for detailed blog page */}
+                <Route path="/blog" element={<BlogList />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
             </Routes>
         </Router>
     );
