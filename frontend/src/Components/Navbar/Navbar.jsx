@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { IoMdSearch } from 'react-icons/io';
 import logo from './AC.png'; // Import the logo image
+import SignUp from '../Login/SignUp';
 
 const MenuLinks = [
     {
         id: 1,
         name: "Home",
-        link:"/#",
+        link: "/#",
     },
     {
         id: 2,
@@ -27,54 +27,39 @@ const MenuLinks = [
         id: 5,
         name: "Crop Suggestion",
         link: "/crop-suggestion"
-    },
-    {
-        
     }
 ];
 
-const IndianLanguages = [
-    {
-        id: 1,
-        name: "हिन्दी",
-    },
-    {
-        id: 2,
-        name: "বাংলা",
-    },
-    {
-        id: 3,
-        name: "తెలుగు",
-    },
-    {
-        id: 4,
-        name: "मराठी",
-    },
-    // Add more Indian regional languages as needed
-];
-
 const Navbar = () => {
-    const [language, setLanguage] = useState(null);
-    const [showLanguages, setShowLanguages] = useState(false);
-
-    const handleLanguageChange = (selectedLanguage) => {
-        setLanguage(selectedLanguage);
-        setShowLanguages(false);
-        // You can implement language change logic here
-    };
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
         <nav className="bg-white dark:bg-gray-900 dark:text-white py-4">
             <div className="container flex items-center justify-between">
-                <div className="flex ">
-                <img src={logo} alt="Logo" className="h-10 mr-2"  />
-                <a href="/" className="text-primary font-semibold tracking-wider text-2xl uppercase sm:text-3xl">
-                
-                    Agri Connect
-                </a>
+                {/* Sidebar Icon */}
+                <div className="lg:hidden">
+                    <button
+                        onClick={() => setSidebarOpen(!sidebarOpen)}
+                        className="text-primary focus:outline-none focus:text-brandYellow"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+                    </button>
                 </div>
-                
-                <div className="lg:block hidden">
+
+                {/* Logo */}
+                <div className="flex items-center">
+                    <img src={logo} alt="Logo" className="h-10 mr-2" />
+                    <a href="/" className="text-primary font-semibold tracking-wider text-2xl uppercase sm:text-3xl">
+                        Agri Connect
+                    </a>
+                </div>
+
+                {/* Navbar Links */}
+                <div className={`lg:block hidden ${sidebarOpen ? 'block' : 'hidden'}`}>
                     <ul className="flex items-center gap-4">
                         {MenuLinks.map((data) => (
                             <li key={data.id}>
@@ -83,25 +68,13 @@ const Navbar = () => {
                                 </a>
                             </li>
                         ))}
+
                     </ul>
                 </div>
-                <div className="flex items-center">
-                    <input type="text" placeholder="Search" className="border border-gray-300 px-2 py-1 rounded-md mr-2" />
-                    <IoMdSearch className="text-xl text-brandYellow" />
-                </div>
-                <div className="relative">
-                    <button className="text-brandWhite hover:text-brandYellow focus:outline-none" onClick={() => setShowLanguages(!showLanguages)}>
-                        {language ? language.name : "Select Language"}
-                    </button>
-                    {showLanguages && (
-                        <ul className="absolute right-0 mt-2 py-2 w-48 bg-gray-800 rounded-md shadow-xl z-20">
-                            {IndianLanguages.map(lang => (
-                                <li key={lang.id} className="px-4 py-2 hover:bg-gray-500 cursor-pointer" onClick={() => handleLanguageChange(lang)}>
-                                    {lang.name}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                <div>
+                    <a href="/signUp" className="bg-brandYellow py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-brandYellow focus:ring-offset-2 focus:ring-offset-gray-100 text-black">
+                        Login/Signup
+                    </a>
                 </div>
             </div>
         </nav>
