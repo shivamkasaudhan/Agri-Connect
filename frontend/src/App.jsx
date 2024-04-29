@@ -18,8 +18,11 @@ const App = () => {
                 <Route path="/crop-suggestion" element={<CropSuggestion />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/shop" element={<ShopPage />} /> 
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:id" element={<Blogs />} /> {/* Route for detailed blog page */}
+                <Route path="/BlogList" element={<BlogList />} />
+                <Route path="/BlogPost/:id" element={<BlogPost />} /> {/* Route for detailed blog page */}
+                <Route path="/Login" element={<Login />} /> {/* Route for detailed blog page */}
+                <Route path="/SignUp" element={<SignUp />} /> {/* Route for detailed blog page */}
+                
             </Routes>
         </Router>
     );

@@ -1,7 +1,7 @@
 // BlogList/BlogList.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import dummyImage from './dummyImage.jpg'; // Import a dummy image
+import dummyImage from './dummy.jpg'; // Import a dummy image
 
 function BlogList() {
   // Dummy blog data with thumbnail image

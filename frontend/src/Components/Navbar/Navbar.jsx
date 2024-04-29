@@ -21,16 +21,13 @@ const MenuLinks = [
     {
         id: 4,
         name: "Blogs",
-        link: "/Blog"
+        link: "/BlogList"
     },
     {
         id: 5,
         name: "Crop Suggestion",
         link: "/crop-suggestion"
     }
-    // {
-        
-    // }
 ];
 
 const Navbar = () => {
