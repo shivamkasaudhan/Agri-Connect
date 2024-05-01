@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, BrowserRouter } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import CropSuggestion from './Components/CropSuggestion';
 import ShopPage from './Components/Shop';
@@ -11,7 +11,7 @@ import Login from './Components/Login/Login'; // Import Login component
 
 const App = () => {
     return (
-        <Router>
+        <BrowserRouter>
             {/* Render the Navbar only if the route is not /signUp or /login */}
             {window.location.pathname !== '/signUp' && window.location.pathname !== '/login' && <Navbar />}
             <Routes>
@@ -24,7 +24,7 @@ const App = () => {
                 <Route path="/SignUp" element={<SignUp />} /> {/* Route for detailed blog page */}
                 
             </Routes>
-        </Router>
+        </BrowserRouter>
     );
 };
 
