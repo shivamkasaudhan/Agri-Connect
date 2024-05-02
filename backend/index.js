@@ -1,16 +1,20 @@
 const express = require('express');
-const app = express();
 const port = 8000;
 const connectDB = require('./DB/ConnectDB');
 const User = require('./DB/User');
 const Blog = require('./DB/Blog');
 
 const cors = require('cors');
+const morgon = require('morgan');
+const colors=require('colors');
+const app = express();
+
 
 //middleware for json parse
 app.use(express.json());
 // enable cors
 app.use(cors());
+app.use(morgon)
 
 //registration 
 app.post('/signup' , async(req,res)=>{
