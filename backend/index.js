@@ -5,8 +5,8 @@ const User = require('./DB/User');
 const Blog = require('./DB/Blog');
 
 const cors = require('cors');
-const morgon = require('morgan');
-const colors=require('colors');
+// const morgon = require('morgan');
+// const colors=require('colors');
 const app = express();
 
 
@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 // enable cors
 app.use(cors());
-app.use(morgon)
+// app.use(morgon)
 
 //registration 
 app.post('/signup' , async(req,res)=>{

@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import logo from './AC.png'; // Import the logo image
-import SignUp from '../Login/SignUp';
+// import SignUp from '../Login/SignUp';
 
 const MenuLinks = [
     {
         id: 1,
         name: "Home",
         link: "/#",
-    },
-    {
-        id: 2,
-        name: "Shop",
-        link: "/Shop"
     },
     {
         id: 3,
