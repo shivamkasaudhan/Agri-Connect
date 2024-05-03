@@ -8,14 +8,15 @@ import About from './Components/About';
 import SignUp from './Components/Login/SignUp';
 import Login from './Components/Login/Login'; 
 import Profile from './Components/profile/Profile';
-import Footer from './Components/footer/Footer';
+import Home from './Components/home/home';
 
 const App = () => {
     return (
         <BrowserRouter>
-            {window.location.pathname !== '/signUp' && window.location.pathname !== '/login' && <Navbar />}
+            {/* {window.location.pathname !== '/signUp' && window.location.pathname !== '/login' && <Navbar />} */}
                 {/* <Footer/> */}
             <Routes>
+            <Route path="/" element={<Home />} />
                 <Route path="/Login" element={<Login />} /> {/* Route for detailed blog page */}
                 <Route path="/crop-suggestion" element={<CropSuggestion />} />
                 <Route path="/about" element={<About />} />
