@@ -1,7 +1,8 @@
 import React from 'react';
-
+import Layout from './layout/layout';
 function AboutUsPage() {
   return (
+    <Layout>
     <div className="min-h-screen bg-brandWhite flex justify-center items-center">
       <div className="max-w-3xl w-full mx-4 bg-brandWhite rounded-lg shadow-lg p-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-primary">About Us</h1>
@@ -63,6 +64,7 @@ function AboutUsPage() {
         </section>
       </div>
     </div>
+    </Layout>
   );
 }
 
