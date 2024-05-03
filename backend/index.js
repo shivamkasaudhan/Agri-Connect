@@ -3,6 +3,7 @@ const port = 8000;
 const connectDB = require('./DB/ConnectDB');
 const User = require('./DB/User');
 const Blog = require('./DB/Blog');
+const Product = require('./DB/AddProduct')
 
 const cors = require('cors');
 // const morgon = require('morgan');
@@ -57,6 +58,20 @@ app.post('/blog', async (req, res) => {
         res.status(500).json({ error: 'Failed to create blog post' });
     }
 });
+// Create a new product
+app.post('/add-product', async (req, res) => {
+    try {
+        const { title, description, image, price, userId } = req.body;
+        const product = new Product({ title, description, image, price, userId });
+        await product.save();
+        res.status(201).json({ message: 'Product added successfully' });
+    } catch (error) {
+        console.error(error); // Log the error to the console for debugging
+        res.status(500).json({ error: 'Failed to add product', message: error.message });
+    }
+});
+
+
 
 connectDB();
 
