@@ -21,9 +21,10 @@ const App = () => {
                 <Route path="/crop-suggestion" element={<CropSuggestion />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/SignUp" element={<SignUp />} /> {/* Route for detailed blog page */}
-                <Route path="/BlogList" element={<BlogList />} />
+                <Route path="/bloglist" element={<BlogList />} />
                 <Route path="/Profile" element={<Profile />} />
-                <Route path="/BlogPost/:id" element={<BlogPost />} /> {/* Route for detailed blog page */}
+                <Route path="/blog/:id" element={<BlogPost />} /> {/* Update the route */}
+                
 
             </Routes>
         </BrowserRouter>

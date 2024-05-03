@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Layout from './layout/layout';
 
 const API_KEY = "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";
 
@@ -99,6 +100,7 @@ function CropSuggestion() {
   }, []);
 
   return (
+    <Layout>
     <div className="min-h-screen flex items-center justify-center bg-brandWhite">
       <div className="max-w-lg w-full p-6 bg-white rounded-lg shadow-lg">
         <div className="mb-4">
@@ -146,6 +148,7 @@ function CropSuggestion() {
         )}
       </div>
     </div>
+    </Layout>
   );
 }
 
