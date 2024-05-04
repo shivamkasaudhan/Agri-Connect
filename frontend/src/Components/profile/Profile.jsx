@@ -1,11 +1,12 @@
 // Profile.js
 
 import React from 'react'
+import Layout from '../layout/layout'
 
 const Profile = () => {
   return (
     <div>
-      Profile
+      <h1>Profile</h1>
     </div>
   )
 }

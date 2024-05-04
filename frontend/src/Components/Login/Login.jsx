@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
     phoneNo: '',
@@ -16,12 +16,15 @@ const Login = () => {
     try {
       const res = await axios.post('http://localhost:8000/login', loginData)
       .then(result=>{
-        navigate('/');
+        navigate('/home')
       });
       const { success, message } = res.data;
       if (success) {
         console.log('Login Successfully');
         toast.success('Login Successfully');
+        localStorage.setItem('isLoggedIn', 'true'); // Set isLoggedIn to true upon successful login
+        onLogin(); // Update login status in parent component
+        // navigate('/home'); // Redirect to the home page
       } else {
         toast.error(message);
         console.log(message);
@@ -70,7 +73,7 @@ const Login = () => {
           <button type="submit" className="w-full bg-primary text-white py-2 rounded-lg focus:outline-none hover:bg-opacity-80 transition duration-300">Login</button>
           <p className="text-center mt-4">
             New User?{' '}
-            <Link to="/SignUp" className="text-brandYellow">Signup</Link>
+            <Link to="/signup" className="text-brandYellow">Signup</Link>
           </p>
         </form>
       </div>

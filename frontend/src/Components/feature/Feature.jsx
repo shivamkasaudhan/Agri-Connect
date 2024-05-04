@@ -1,34 +1,58 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import AI from './AI.png';
+import blog from './blog.png';
+import sell from './sell.png';
 
-const Feature = ()=> {
+const Feature = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (route) => {
+    navigate(route);
+  };
+
   return (
-    <div>
-      <h2 className="text-center text-brandBlue text-3xl font-bold mb-8">What We Are Providing</h2>
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="flex-1">
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8 md:mb-0">
-            <h3 className="text-brandBlue text-xl font-semibold mb-4">AI Farm Guide</h3>
-            <p className="text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+    <div className="container mx-auto py-12">
+      {/* Services Heading */}
+      <h2 className="text-center text-secondary text-3xl font-bold mb-8">Our Services</h2>
+
+      {/* Grid of Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* First Card */}
+        <button className="bg-white rounded-lg shadow-md overflow-hidden" onClick={() => handleClick('/crop-suggestion')}>
+          <img
+            className="w-full aspect-w-16 aspect-h-9 object-cover"
+            src={AI}
+            alt="Image 1"
+          />
+          <div className="p-4">
+            <h3 className="text-secondary text-lg font-semibold mb-2">AI Farm Guid</h3>
           </div>
-        </div>
-        <div className="flex-1">
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8 md:mb-0">
-            <h3 className="text-brandBlue text-xl font-semibold mb-4">Farming Content in Blogs</h3>
-            <p className="text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+        </button>
+
+        {/* Second Card */}
+        <button className="bg-white rounded-lg shadow-md overflow-hidden" onClick={() => handleClick('/BlogList')}>
+          <img
+            className="w-full aspect-w-16 aspect-h-9 object-cover"
+            src={blog}
+            alt="Image 2"
+          />
+          <div className="p-4">
+            <h3 className="text-secondary text-lg font-semibold mb-2">Learn Organic Farming</h3>
           </div>
-        </div>
-        <div className="flex-1">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-brandBlue text-xl font-semibold mb-4">Connecting Customers to Farmers</h3>
-            <p className="text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+        </button>
+
+        {/* Third Card */}
+        <button className="bg-white rounded-lg shadow-md overflow-hidden" onClick={() => handleClick('/profile')}>
+          <img
+            className="w-full aspect-w-16 aspect-h-9 object-cover"
+            src={sell}
+            alt="Image 3"
+          />
+          <div className="p-4">
+            <h3 className="text-secondary text-lg font-semibold mb-2">Sell Online</h3>
           </div>
-        </div>
+        </button>
       </div>
     </div>
   );
