@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from './layout/layout';
-import AboutImage from './about.jpeg'; // Import the image for the About section
+import AboutImage from './about.jpg'; // Import the image for the About section
 import user from './user.jpeg';
 
 function AboutUsPage() {
@@ -25,15 +25,18 @@ function AboutUsPage() {
 
           {/* About Text */}
           <div className="w-1/2 pl-8">
-            <h2 className="text-xl font-semibold mb-4">About This Project</h2>
+            <h2 className="text-xl font-semibold mb-4">Unleash the Potential of Your Farm with AgriConnect</h2>
             <p className="mb-4 text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem nec velit sagittis ultricies ac in libero.
-              Duis posuere, risus non fermentum sollicitudin, nisl est sollicitudin lacus, ut sodales sapien orci vel eros.
+            AgriConnect is a pioneering AI-driven platform designed to empower farmers and revolutionize the agricultural landscape. Our comprehensive three-tiered solution suite equips you with the tools and knowledge to achieve sustainable growth and success.
             </p>
-            <p className="text-gray-800">
-              Aliquam consequat felis ac lectus hendrerit, vitae tristique arcu eleifend. Integer euismod, felis nec vehicula 
-              condimentum, justo tortor consequat justo, sed viverra mi purus ut odio. Sed auctor eros nec magna feugiat, in 
-              mattis libero pretium.
+            <p className=" mb-4 text-gray-800">
+            <span className='font-bold'>Streamline Farm-to-Consumer Sales:</span> Eliminate intermediaries and connect directly with potential customers through our user-friendly platform.  Reach new markets, secure better returns, and gain greater control over your produce.
+            </p>
+            <p className="mb-4 text-gray-800">
+            <span className='font-bold'>AI-Powered Farm Guidance:</span> Leverage our AI farm guide, your personalized agronomist assistant.  Gain data-driven crop recommendations tailored to your specific needs and growing conditions. Ask questions and receive clear, actionable guidance in your local language using our voice-enabled AI for maximum convenience.
+            </p>
+            <p className="mb-4 text-gray-800">
+            <span className='font-bold'>Cultivate Knowledge with Our Agricultural Blog:</span> Stay informed and inspired with our informative blog.  Gain valuable insights from expert advice on adopting sustainable natural farming practices. Discover the latest industry trends and success stories from fellow farmers within the AgriConnect community.
             </p>
           </div>
         </div>

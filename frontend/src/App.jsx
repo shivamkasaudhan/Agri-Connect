@@ -9,6 +9,7 @@ import CropSuggestion from './Components/CropSuggestion';
 import About from './Components/About'
 import AddProduct from './Components/addProduct/AddProduct';
 import BlogPost from './Components/BlogPost/BlogPost'; // Import the BlogPost component
+import AddBlog from './Components/add blog/AddBlog';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/bloglist" element={<BlogList />} />
                 <Route path="/farmguide" element={<CropSuggestion />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/addblog" element={<AddBlog />} />
                 <Route path="/addProduct" element={<AddProduct />} />
                 {/* Add the Route for BlogPost with the parameter ':id' */}
                 <Route path="/blog/:id" element={<BlogPost />} />
