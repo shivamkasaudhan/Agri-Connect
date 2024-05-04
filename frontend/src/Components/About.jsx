@@ -1,69 +1,106 @@
 import React from 'react';
 import Layout from './layout/layout';
+import AboutImage from './about.jpeg'; // Import the image for the About section
+import user from './user.jpeg';
+
 function AboutUsPage() {
   return (
     <Layout>
-    <div className="min-h-screen bg-brandWhite flex justify-center items-center">
-      <div className="max-w-3xl w-full mx-4 bg-brandWhite rounded-lg shadow-lg p-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-primary">About Us</h1>
+      <div className="container mx-auto py-8 bg-gradient-to-b from-transparent to-green-100 rounded-lg overflow-hidden">
+        {/* About Heading */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-semibold text-brandBlue">About Us</h1>
+        </div>
 
-        {/* Brand Story */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Our Brand Story</h2>
-          <p className="text-lg text-gray-800 mb-4">
-            At FreshHarvest, our story began with a passion for sustainable farming and a desire to bring fresh, organic produce directly from the farm to your table. What started as a small family farm has now grown into a thriving community of farmers and consumers who share our vision for a healthier, more sustainable future.
-          </p>
-          <p className="text-lg text-gray-800 mb-4">
-            We believe in the power of locally grown food to nourish our bodies and our communities. That's why we're committed to supporting local farmers and promoting environmentally friendly farming practices. Join us in our mission to make fresh, organic produce accessible to everyone.
-          </p>
-        </section>
+        {/* About Content */}
+        <div className="flex items-center">
+          {/* About Image */}
+          <div className="w-1/2 h-1/2">
+            <img
+              src={AboutImage}
+              alt="About"
+              className="w-full rounded-lg hover:opacity-80 transition-opacity duration-300"
+            />
+          </div>
 
-        {/* Who We Serve */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Who We Serve</h2>
-          <p className="text-lg text-gray-800 mb-4">
-            Our products are for anyone who values the quality and taste of fresh, organic produce. Whether you're a health-conscious individual, a busy parent looking to feed your family nutritious meals, or a chef searching for the finest ingredients, FreshHarvest is here for you.
-          </p>
-          <p className="text-lg text-gray-800 mb-4">
-            We cater to individuals and businesses alike, offering a wide range of seasonal fruits, vegetables, herbs, and more. With our convenient online platform, you can easily browse our selection, place your order, and have farm-fresh goodness delivered straight to your doorstep.
-          </p>
-        </section>
+          {/* About Text */}
+          <div className="w-1/2 pl-8">
+            <h2 className="text-xl font-semibold mb-4">About This Project</h2>
+            <p className="mb-4 text-gray-800">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem nec velit sagittis ultricies ac in libero.
+              Duis posuere, risus non fermentum sollicitudin, nisl est sollicitudin lacus, ut sodales sapien orci vel eros.
+            </p>
+            <p className="text-gray-800">
+              Aliquam consequat felis ac lectus hendrerit, vitae tristique arcu eleifend. Integer euismod, felis nec vehicula 
+              condimentum, justo tortor consequat justo, sed viverra mi purus ut odio. Sed auctor eros nec magna feugiat, in 
+              mattis libero pretium.
+            </p>
+          </div>
+        </div>
 
-        {/* How We Operate */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">How We Operate</h2>
-          <p className="text-lg text-gray-800 mb-4">
-            At FreshHarvest, transparency and sustainability are at the core of everything we do. We work directly with local farmers who share our commitment to organic farming practices and ethical production methods. By cutting out the middlemen, we ensure fair prices for both our farmers and our customers.
-          </p>
-          <p className="text-lg text-gray-800 mb-4">
-            Our online platform connects you with a diverse network of farmers, allowing you to support small-scale agriculture while enjoying the freshest produce available. We prioritize freshness and quality, carefully selecting each item to ensure it meets our rigorous standards.
-          </p>
-        </section>
-
-        {/* The Face of Our Business */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">The Face of Our Business</h2>
-          <p className="text-lg text-gray-800 mb-4">
-            Meet the team behind FreshHarvest – a group of passionate individuals dedicated to bringing you the best in organic produce. Our founders, Sarah and David, started this journey with a shared love for farming and a commitment to sustainability. Today, they lead a team of farmers, food enthusiasts, and customer service experts who are here to serve you.
-          </p>
-          {/* Include images of founders or team members here */}
-        </section>
-
-        {/* Persuasive Content */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Persuasive Content</h2>
-          <p className="text-lg text-gray-800 mb-4">
-            Ready to experience the difference with FreshHarvest? Explore our wide selection of farm-fresh produce, browse our recipe ideas for inspiration, and join our community of food lovers who are passionate about supporting local agriculture. Together, we can create a healthier, more sustainable future for all.
-          </p>
-        </section>
-
-        {/* Call to Action */}
-        <section>
-          {/* Add your call to action here, such as buttons, links, etc. */}
-          <button className="bg-primary text-white py-2 px-4 rounded-md hover:bg-blue-600">Shop Now</button>
-        </section>
+        {/* Contribution Section */}
+        <div className="mt-8">
+          <h2 className="text-xl font-semibold mb-4">Contributors</h2>
+          <div className="grid grid-cols-4 gap-4">
+            {/* Contributor 1 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 1" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 1</p>
+            </div>
+            {/* Contributor 2 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 2" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 2</p>
+            </div>
+            {/* Contributor 3 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 3" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 3</p>
+            </div>
+            {/* Contributor 4 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 4" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 4</p>
+            </div>
+            {/* Contributor 5 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 5" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 5</p>
+            </div>
+            {/* Contributor 6 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 6" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 6</p>
+            </div>
+            {/* Contributor 7 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 7" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 7</p>
+            </div>
+            {/* Contributor 8 */}
+            <div className="text-center">
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
+                <img src={user} alt="Contributor 8" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              </a>
+              <p>Contributor 8</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </Layout>
   );
 }
