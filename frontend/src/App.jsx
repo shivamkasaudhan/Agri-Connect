@@ -24,8 +24,8 @@ const App = () => {
                 <Route path="/bloglist" element={<BlogList />} />
                 <Route path="/Profile" element={<Profile />} />
                 <Route path="/blog/:id" element={<BlogPost />} /> {/* Update the route */}
+               
                 
-
             </Routes>
         </BrowserRouter>
     );
