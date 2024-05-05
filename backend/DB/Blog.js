@@ -2,18 +2,45 @@ const mongoose = require('mongoose');
 
 const BlogSchema = new mongoose.Schema({
     title: {
-        type: String,
-        required: true
+        en: {
+            type: String,
+            required: true
+        },
+        hi: {
+            type: String,
+            required: true
+        },
+        mr: {
+            type: String,
+            required: true
+        }
+        // Add more languages as needed
     },
     date: {
         type: Date,
         default: Date.now
     },
     image: String,
-    summary: String,
+    summary: {
+        en: String,
+        hi: String,
+        mr: String
+        // Add more languages as needed
+    },
     content: {
-        type: String,
-        required: true
+        en: {
+            type: String,
+            required: true
+        },
+        hi: {
+            type: String,
+            required: true
+        },
+        mr: {
+            type: String,
+            required: true
+        }
+        // Add more languages as needed
     }
 });
 

@@ -6,10 +6,13 @@ import Home from './Components/home/home';
 import Profile from './Components/profile/Profile';
 import BlogList from './Components/BlogList/BlogList'
 import CropSuggestion from './Components/CropSuggestion';
-import About from './Components/About'
+import About from './Components/About/About'
 import AddProduct from './Components/addProduct/AddProduct';
-import BlogPost from './Components/BlogPost/BlogPost'; // Import the BlogPost component
+// import BlogPost from './Components/BlogPost/BlogPost'; // Import the BlogPost component
 import AddBlog from './Components/add blog/AddBlog';
+import HindiBlogPost from './Components/BlogPost/HindiBlogPost';
+import EnglishBlogPost from './Components/BlogPost/EnglishBlogPost';
+import MarathiBlogPost from './Components/BlogPost/MarathiBlogpost';
 
 const App = () => {
     return (
@@ -26,7 +29,12 @@ const App = () => {
                 <Route path="/addblog" element={<AddBlog />} />
                 <Route path="/addProduct" element={<AddProduct />} />
                 {/* Add the Route for BlogPost with the parameter ':id' */}
-                <Route path="/blog/:id" element={<BlogPost />} />
+                {/* <Route path="/blog/:id" element={<BlogPost />} /> */}
+                <Route path="/blog/:id/en" element={<EnglishBlogPost />} />
+                <Route path="/blog/:id/hi" element={<HindiBlogPost />} />
+                <Route path="/blog/:id/mr" element={<MarathiBlogPost />} />
+                <Route path="/profile/:id" element={<Profile />} />
+
             </Routes>
         </Router>
     );

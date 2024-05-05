@@ -138,7 +138,7 @@ function CropSuggestion() {
         <button onClick={handleReadAloud} className="bg-brandYellow py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-brandYellow focus:ring-offset-2 focus:ring-offset-gray-100 text-black ml-4">Read Aloud</button>
         {cropSuggestions.length > 0 && (
           <div className="mt-4">
-            <h3 className="text-lg font-semibold mb-2">Crop Suggestions:</h3>
+            <h3 className="text-lg font-semibold mb-2">Your Result:</h3>
             <ul>
               {cropSuggestions.map((crop, index) => (
                 <li key={index} className="text-gray-800">{crop}</li>

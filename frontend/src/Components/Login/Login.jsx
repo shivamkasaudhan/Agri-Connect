@@ -16,15 +16,16 @@ const Login = ({ onLogin }) => {
     try {
       const res = await axios.post('http://localhost:8000/login', loginData)
       .then(result=>{
+        localStorage.setItem('phoneNo', loginData.phoneNo); 
+        console.log(loginData.phoneNo);
         navigate('/home')
       });
-      const { success, message } = res.data;
+      console.log(res);
+      const { success, message,userId } = res.data;
       if (success) {
         console.log('Login Successfully');
         toast.success('Login Successfully');
-        localStorage.setItem('isLoggedIn', 'true'); // Set isLoggedIn to true upon successful login
         onLogin(); // Update login status in parent component
-        // navigate('/home'); // Redirect to the home page
       } else {
         toast.error(message);
         console.log(message);

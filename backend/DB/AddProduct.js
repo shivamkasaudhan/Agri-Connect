@@ -17,9 +17,8 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User', // Reference to the User model
+    phoneNo: {
+        type: String,
         required: true
     }
 });

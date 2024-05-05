@@ -6,7 +6,7 @@ function AddProduct() {
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [price, setPrice] = useState('');
-  const [userId, setUserId] = useState('');
+  const [phoneNo, setPhoneNo] = useState('');
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -18,7 +18,7 @@ function AddProduct() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ title, description, image, price, userId }),
+        body: JSON.stringify({ title, description, image, price, phoneNo }),
       });
       if (response.ok) {
         setSuccessMessage('Product added successfully');
@@ -53,8 +53,8 @@ function AddProduct() {
             <input type="number" id="price" value={price} onChange={(e) => setPrice(e.target.value)} className="border border-gray-300 rounded-md p-2 w-full" required />
           </div>
           <div className="mb-4">
-            <label htmlFor="userId" className="block text-gray-800">User ID</label>
-            <input type="text" id="userId" value={userId} onChange={(e) => setUserId(e.target.value)} className="border border-gray-300 rounded-md p-2 w-full" required />
+            <label htmlFor="phoneNo" className="block text-gray-800">Phone no.</label>
+            <input type="text" id="phoneNo" value={phoneNo} onChange={(e) => setPhoneNo(e.target.value)} className="border border-gray-300 rounded-md p-2 w-full" required />
           </div>
           {error && <p className="text-red-500 mb-4">{error}</p>}
           {successMessage && <p className="text-green-500 mb-4">{successMessage}</p>}

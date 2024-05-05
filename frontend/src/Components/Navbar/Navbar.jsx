@@ -10,23 +10,26 @@ const MenuLinks = [
         link: "/home",
     },
     {
-        id: 3,
-        name: "About",
-        link: "/About"
+        id: 2,
+        name: "AI Farm Guide",
+        link: "/farmguide"
     },
     {
-        id: 4,
+        id: 3,
         name: "Blogs",
         link: "/bloglist"
     },
     {
-        id: 5,
-        name: "Crop Suggestion",
-        link: "/farmguide"
+        id: 4,
+        name: "About",
+        link: "/About"
     }
 ];
 
 const Navbar = () => {
+    // Retrieve userId from localStorage
+    const phoneNo = localStorage.getItem('phoneNo');
+
     return (
         <nav className="bg-white dark:bg-gray-900 dark:text-white py-4">
             <div className="container flex items-center justify-between">
@@ -54,7 +57,7 @@ const Navbar = () => {
 
                 {/* User Image Link */}
                 <div>
-                    <Link to="/profile">
+                    <Link to={`/profile/${phoneNo}`}> {/* Link to the user's profile using their stored userId */}
                         <img src={userImage} alt="User" className="h-10 w-10 rounded-full" />
                     </Link>
                 </div>

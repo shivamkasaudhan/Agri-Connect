@@ -26,7 +26,7 @@ const Feature = () => {
             alt="Image 1"
           />
           <div className="p-4">
-            <h3 className="text-secondary text-lg font-semibold mb-2">AI Farm Guid</h3>
+            <h3 className="text-secondary text-lg font-semibold mb-2">AI Farm Guide</h3>
           </div>
         </button>
 

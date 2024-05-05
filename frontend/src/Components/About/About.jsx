@@ -1,7 +1,8 @@
 import React from 'react';
-import Layout from './layout/layout';
+import Layout from '../layout/layout';
 import AboutImage from './about.jpg'; // Import the image for the About section
 import user from './user.jpeg';
+import shivam from './shivam.jpg'
 
 function AboutUsPage() {
   return (
@@ -48,9 +49,9 @@ function AboutUsPage() {
             {/* Contributor 1 */}
             <div className="text-center">
               <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
-                <img src={user} alt="Contributor 1" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+                <img src={shivam} alt="Shivam Kasaudhan" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
               </a>
-              <p>Contributor 1</p>
+              <p>Shivam Kasaudhan</p>
             </div>
             {/* Contributor 2 */}
             <div className="text-center">
