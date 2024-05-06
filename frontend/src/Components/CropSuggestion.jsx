@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/layout';
 
-const API_KEY = "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";
+const API_KEY = "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";
 
 function CropSuggestion() {
   const [inputText, setInputText] = useState("");
@@ -20,7 +20,7 @@ function CropSuggestion() {
         }
       ],
       "temperature": 0.7,
-      "max_tokens": 64,
+      // "max_tokens": 64,
       "top_p": 1
     }
 

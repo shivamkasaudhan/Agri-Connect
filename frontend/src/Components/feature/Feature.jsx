@@ -19,7 +19,7 @@ const Feature = () => {
       {/* Grid of Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* First Card */}
-        <button className="bg-white rounded-lg shadow-md overflow-hidden" onClick={() => handleClick('/crop-suggestion')}>
+        <button className="bg-white rounded-lg shadow-md overflow-hidden" onClick={() => handleClick('/farmguide')}>
           <img
             className="w-full aspect-w-16 aspect-h-9 object-cover"
             src={AI}
