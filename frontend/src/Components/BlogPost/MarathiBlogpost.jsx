@@ -34,13 +34,16 @@ function MarathiBlogPost() {
     );
   }
 
+  const formattedDate = new Date(blog.date).toLocaleDateString();
+  const formattedTime = new Date(blog.date).toLocaleTimeString();
+
   return (
     <Layout>
       <div className="container mx-auto py-8">
         <h1 className="text-3xl font-bold mb-4">{blog.title.mr}</h1>
+        <h2 className="text-xl font-bold mb-2 text-primary">{formattedDate} {formattedTime}</h2>
         <div className="bg-white p-4 rounded-lg shadow-md">
           <img src={blog.image} alt="Blog Thumbnail" className="w-full h-auto max-h-80 object-cover mb-4" />
-          <h2 className="text-xl font-bold mb-2 text-primary">{blog.timestamp}</h2>
           <p>{blog.content.mr}</p>
         </div>
       </div>
