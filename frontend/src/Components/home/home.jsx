@@ -4,6 +4,7 @@ import HeroSection from '../hero section/heroSection'
 import Feature from '../feature/Feature'
 import LatestBlog from '../blog window/LatestBlog'
 import { Link } from 'react-router-dom'
+import Testimonial from '../testimonials/Testimonial'
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
       <HeroSection />
       <Feature/>
       <LatestBlog/>
+      <Testimonial/>
     </Layout>
   )
 }

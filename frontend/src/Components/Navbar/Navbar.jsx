@@ -22,7 +22,7 @@ const MenuLinks = [
     {
         id: 4,
         name: "About",
-        link: "/About"
+        link: "/about"
     }
 ];
 
@@ -36,19 +36,19 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <div className="flex items-center">
-                    <img src={logo} alt="Logo" className="h-10 mr-2" />
+                    <img src={logo} alt="Agri-Connect Logo" className="h-10 mr-2" />
                     <Link to="/home" className="text-primary font-semibold tracking-wider text-2xl uppercase sm:text-3xl">
-                        Agri Connect
+                        Agri-Connect
                     </Link>
                 </div>
 
                 {/* Navbar Links */}
                 <div>
                     <ul className="flex items-center gap-4">
-                        {MenuLinks.map((data) => (
-                            <li key={data.id}>
-                                <Link to={data.link} className="inline-block px-4 font-semibold hover:text-brandYellow">
-                                    {data.name}
+                        {MenuLinks.map(({ id, name, link }) => (
+                            <li key={id}>
+                                <Link to={link} className="inline-block px-4 font-semibold hover:text-brandYellow">
+                                    {name}
                                 </Link>
                             </li>
                         ))}
@@ -56,11 +56,13 @@ const Navbar = () => {
                 </div>
 
                 {/* User Image Link */}
-                <div>
-                    <Link to={`/profile/${phoneNo}`}> {/* Link to the user's profile using their stored userId */}
-                        <img src={userImage} alt="User" className="h-10 w-10 rounded-full" />
-                    </Link>
-                </div>
+                {phoneNo && (
+                    <div>
+                        <Link to={`/profile/${phoneNo}`}> {/* Link to the user's profile using their stored userId */}
+                            <img src={userImage} alt="User Profile" className="h-10 w-10 rounded-full" />
+                        </Link>
+                    </div>
+                )}
             </div>
         </nav>
     );

@@ -37,7 +37,7 @@ function AddProduct() {
         <h1 className="text-3xl font-bold mb-4 text-brandBlue">Add New Product</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="title" className="block text-gray-800">Title</label>
+            <label htmlFor="title" className="block text-gray-800">Product name</label>
             <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} className="border border-gray-300 rounded-md p-2 w-full" required />
           </div>
           <div className="mb-4">

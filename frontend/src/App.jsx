@@ -13,6 +13,7 @@ import AddBlog from './Components/add blog/AddBlog';
 import HindiBlogPost from './Components/BlogPost/HindiBlogPost';
 import EnglishBlogPost from './Components/BlogPost/EnglishBlogPost';
 import MarathiBlogPost from './Components/BlogPost/MarathiBlogpost';
+import Testimonial from './Components/testimonials/Testimonial';
 
 const App = () => {
     return (
@@ -34,6 +35,7 @@ const App = () => {
                 <Route path="/blog/:id/hi" element={<HindiBlogPost />} />
                 <Route path="/blog/:id/mr" element={<MarathiBlogPost />} />
                 <Route path="/profile/:id" element={<Profile />} />
+                <Route path="/testi" element={<Testimonial />} />
 
             </Routes>
         </Router>

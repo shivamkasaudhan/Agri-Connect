@@ -13,8 +13,8 @@ function Footer() {
                 <h1 className=' text-2xl font-bold text-black  px-2 py-1 rounded' >Agri-Connect</h1>
               </div>
             </Link>
-            <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" >© 2024 Agri-Connect —
-              <a href="https://www.linkedin.com/in/shivamkasaudhan/" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" >www.agriconnect.com</a>
+            <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" >
+              <a href="https://www.linkedin.com/in/shivamkasaudhan/" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" >© 2024 Agri-Connect</a>
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               <a className="text-gray-500">
