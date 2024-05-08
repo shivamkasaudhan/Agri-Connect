@@ -3,6 +3,12 @@ import Layout from '../layout/layout';
 import AboutImage from './about.jpg'; // Import the image for the About section
 import user from './user.jpeg';
 import shivam from './shivam.jpg'
+import Prince from './Prince.jpg'
+import Jai from './Jai.jpg'
+import Rohan from './Rohan.jpg'
+import Dhruv from './Dhruv.jpg'
+
+
 
 function AboutUsPage() {
   return (
@@ -55,31 +61,31 @@ function AboutUsPage() {
             </div>
             {/* Contributor 2 */}
             <div className="text-center">
-              <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
-                <img src={user} alt="Contributor 2" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+              <a href="https://www.linkedin.com/in/princejaiswalvitb/" target="_blank" rel="noopener noreferrer">
+                <img src={Prince} alt="Prince Jaiswal" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
               </a>
-              <p>Contributor 2</p>
+              <p>Prince Jaiswal</p>
             </div>
             {/* Contributor 3 */}
             <div className="text-center">
               <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
-                <img src={user} alt="Contributor 3" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+                <img src={Jai} alt="Contributor 3" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
               </a>
-              <p>Contributor 3</p>
+              <p>Jai Singh Bisht</p>
             </div>
             {/* Contributor 4 */}
             <div className="text-center">
               <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
-                <img src={user} alt="Contributor 4" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+                <img src={Rohan} alt="Contributor 4" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
               </a>
-              <p>Contributor 4</p>
+              <p>Rohan Kushwaha</p>
             </div>
             {/* Contributor 5 */}
             <div className="text-center">
               <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
                 <img src={user} alt="Contributor 5" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
               </a>
-              <p>Contributor 5</p>
+              <p>Siddhart Shivhare</p>
             </div>
             {/* Contributor 6 */}
             <div className="text-center">
@@ -98,9 +104,9 @@ function AboutUsPage() {
             {/* Contributor 8 */}
             <div className="text-center">
               <a href="https://www.linkedin.com/in/shivamkasaudhan/" target="_blank" rel="noopener noreferrer">
-                <img src={user} alt="Contributor 8" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
+                <img src={Dhruv} alt="Contributor 8" className="w-20 h-20 mx-auto mb-2 rounded-lg hover:scale-105 transition-transform duration-300" />
               </a>
-              <p>Contributor 8</p>
+              <p>Dhruv Shah</p>
             </div>
           </div>
         </div>
